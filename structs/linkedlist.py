@@ -105,21 +105,3 @@ class LinkedList():
                 return True
             cur_node = cur_node.get_next()
         return False
-
-
-l = LinkedList()
-l.append('a')
-l.append('b')
-l.append('c')
-# print(l.search('d'))
-# l.print()
-l.insert_after('x', 'b')
-#l.print()
-l.remove('a')
-l.print()
-
-# print(l.pop())
-# print(l.pop())
-# l.append('d')
-# print(l.pop())
-# l.print()
