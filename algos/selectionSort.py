@@ -13,3 +13,10 @@ def selectionSort(array):
         array[i], array[min_idx] = array[min_idx], array[i]
 
     return array
+
+if __name__ == "__main__":
+    print(selectionSort([2, 5, 3, 9, 8, 7, 1]))
+    print(selectionSort([1, 2, 3, 4, 6]))
+    print(selectionSort([9, 8, 7, 6, 5, 4, 3, 2, 1]))
+    print(selectionSort([2, 5, 3, 9, 1, 2]))
+    print(selectionSort([2, 5, 3, 9]))
