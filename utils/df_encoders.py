@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn import preprocessing as pp
 
 # One Hot Encoding
 def ohe_feature(df, feature, drop_additional_feature=True):
