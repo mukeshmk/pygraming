@@ -16,3 +16,15 @@ def ohe_feature(df, feature, drop_additional_feature=True):
 
     return df, encoder
 
+# Label Encoding
+def label_encode_feature(df, feature):
+    encoder = pp.LabelEncoder()
+    data = encoder.fit_transform(df[feature].values.reshape(len(df[feature]), 1))
+    # to drop the original column in the df
+    del df[feature]
+    # creating the encoded df
+    ledf = pd.DataFrame(data, columns=[feature])
+    # concat the ohe df with the original df
+    df = pd.concat([df, ledf], axis=1)
+
+    return df, encoder
